@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Consultar from '../components/Consultar.vue'
+import Eliminar from '../components/Eliminar.vue'
+import Actualizar from '../components/Actualizar.vue'
+import FormActualizarView from '../views/FormActualizarView.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +13,27 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+
+  {
+    path: '/consultar',
+    name: 'consultar',
+    component: Consultar
+  },
+  {
+    path: '/eliminar',
+    name: 'eliminar',
+    component: Eliminar
+  },
+  {
+    path: '/actualizar',
+    name: 'actualizar',
+    component: Actualizar
+  },
+  {
+    path: '/formactualizar/:id',
+    name: 'formactualizar',
+    component: FormActualizarView
   },
   {
     path: '/about',
